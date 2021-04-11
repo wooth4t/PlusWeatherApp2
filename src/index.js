@@ -35,10 +35,10 @@ console.log("oh hello");
 
 // WEATHER - START
 function showTemperature(response) {
-  console.log(response.data[0].title);
+  console.log(response.data);
 }
 
-
-let apiurl = `https://jsonpalceholder.typicode.com`;
+//let apiKey = `a293c24d2c990fb6e2eb0ee4dacc8fe9`;
+let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city name}&appid=${apiKey}&units=metric`;
 axios.get(apiurl).then(showTemperature);
 
