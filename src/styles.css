@@ -1,0 +1,80 @@
+body {
+font-family: 'Changa', sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.app-container {
+background-size: cover;
+border: 1px solid black;
+color: #29323c;
+margin-top: 80px;
+padding: 40px 20px;
+border-radius: 6px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  text-align: left;
+  margin-left: 30px;
+}
+
+h2 {
+  margin: 20px 0 0 30px;
+}
+
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.col-7, .col-5 {
+  max-height: 220px;
+  padding: 0;
+}
+
+h1 {
+  margin: 100px 0 0 20px;
+  max-width: 120px;
+  text-align: bottom;
+}
+
+.fa-cloud-sun-rain {
+  font-size: 150px;
+  position: relative;
+  right: -25px;
+  top: -140px;
+  opacity: .1;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0 10px;
+}
+
+li {
+  line-height: 1.8rem;
+}
+
+.col-12 {
+  padding: 0;
+  text-align: center;
+}
+
+
+
+
+
+/**
+
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+    **/

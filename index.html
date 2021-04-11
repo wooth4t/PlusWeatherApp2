@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Orbitron&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e1bfa0598a.js"></script>
+  <link rel="stylesheet" href="src/styles.css">
+
+    <title>WeatherAppV2</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="app-container border">
+      
+
+      <div class="row">
+      <div class="col-12">
+        <form>
+          <input type="search" placeholder="Enter city here" autofocus="on" autocomplete="off" id="enterCity" />
+          <input type="submit" value="search" />
+        </form>
+      </div>
+      
+      
+      <div class="col-12"> 
+        <h2>Toronto</h2>
+        <h3 class=today></h3>
+      </div>
+    </div>
+  
+
+      <div class="row">
+        <div class="col-7 middle-left">
+          <h1 class="main-temp">23°
+            C|F
+          </h1>
+          <i class="fas fa-cloud-sun-rain"></i>
+        </div>
+    
+        <div class="col-5 middle-right">
+          <ul>
+            <li>Sunny</li>
+            <li>Humidity: 34 %</li>
+            <li>Wind: 56 km/h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-12">
+          Weather Forecast
+          Weather Forecast
+          Weather Forecast
+        </div>
+      </div>
+
+     </div> 
+  </div>
+  <script src="src/index.js"></script>
+</body>
+</html>
