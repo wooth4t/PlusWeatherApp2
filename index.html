@@ -17,49 +17,71 @@
 </head>
 <body>
   <div class="container">
-    <div class="app-container border">
-      
+    <div class="app-container">   
 
-      <div class="row">
-      <div class="col-12">
-        <form>
-          <input type="search" placeholder="Enter city here" autofocus="on" autocomplete="off" id="enterCity" />
-          <input type="submit" value="search" />
-        </form>
-      </div>
+      <h1 class=today></h1>
+      <form>
+        <input type="search" placeholder="Entr city here" autofocus="on" autocomplete="off" id="enterCity" size="24" />
+        <input type="submit" value="search" />
+      </form>
       
-      
-      <div class="col-12"> 
-        <h2>Toronto</h2>
-        <h3 class=today></h3>
-      </div>
-    </div>
-  
-
-      <div class="row">
-        <div class="col-7 middle-left">
-          <h1 class="main-temp">23°
-            C|F
-          </h1>
+      <div class="icon" id="icon">        
+          <!-- 
           <i class="fas fa-cloud-sun-rain"></i>
-        </div>
-    
-        <div class="col-5 middle-right">
-          <ul>
-            <li>Sunny</li>
-            <li>Humidity: 34 %</li>
-            <li>Wind: 56 km/h</li>
-          </ul>
-        </div>
+          -->
       </div>
+
+      <div class="city" id="city">Toronto</div>
+
+      <div class="row">
+
+        <div class="col-3 temp-range min">
+          <span id="min">18</span>
+          <br />
+          Low
+        </div>
+        
+        <div class="col-1">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </div>
+
+        <div class="col-4 main-temp">
+          <span id="temperature">23</span>
+          <span class="unit">
+            <a href="#" id="celsius-link">C</a>
+              |
+            <a href="#" id="fahrenheit-link">F</a>
+          </span>
+        </div>
+
+        <div class="col-1">
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </div>
+      
+        <div class="col-3 temp-range max">
+          <span id="max">27</span> 
+          <br />
+          High
+        </div>
+  
+      </div>
+
+      <ul>       
+        <li class="description"><span id="description">Sunny</span></li>
+        <li class="humidity">Humidity: <span id="humidity"></span> %</li>
+        <li class="wind">Wind: <span id="wind"></span> km/h</li>
+        <li class="gust">Gust: <span id="gust"></span> km/h</li>
+      </ul>
+
+      <hr/>
 
       <div class="row ">
         <div class="col-12">
           Weather Forecast
           Weather Forecast
-          Weather Forecast
         </div>
       </div>
+
 
      </div> 
   </div>

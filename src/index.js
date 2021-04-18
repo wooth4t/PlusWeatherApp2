@@ -1,5 +1,5 @@
 
-// ----------------------MAIN DATE SECTION - START---------------
+// ----------------------MAIN DATE & TIME SECTION - START---------------
 let now = new Date();
 
 let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
@@ -12,11 +12,20 @@ let date = now.getDate();
 
 let year = now.getFullYear();
 
-let currentDate = `${day} ${month} ${date}, ${year}`
+let hour = now.getHours();
+if (hour < 10 ) {
+ hour = `0${hour}`;
+}
+let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`
+}
+
+let currentDate = `${day} ${month} ${date}, ${year}  ${hour}:${minute}`;
 
 let today = document.querySelector(".today");
 today.innerHTML = `${currentDate}`
-// -----------------------MAIN DATE SECTION - END-----------------
+// -----------------------MAIN DATE & TIME SECTION - END-----------------
 
 // -----------------------CITY SEARCHED - START--------------------
 function searched(event) {
@@ -37,6 +46,25 @@ console.log("oh hello");
 // ------------------------WEATHER - START-------------------------
 function showTemperature(response) {
   console.log(response.data);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatuerElement.innerHTML = Math.round(celsiusTemperature);
+
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humdity;
+
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = response.data.wind.speed;
+
+  let tempMaxElement = document.querySelector("max");
+  tempMaxElement.innerHTML = response.data.main.temp_max;
+
+  let tempMinElement = document.querySelector("min");
+  tempMinElement.innerHTML = response.data.main.temp_min;
+
+
 }
 
 
@@ -48,13 +76,7 @@ let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
 axios.get(apiurl).then(showTemperature);
 
 
-//response.data.main.humidity
-//response.data.main.temp
-//response.data.main.temp_max
-//response.data.main.temp_min
-//response.data.main.name
-//response.data.weather.description
 //repsonse.data.weather.icon
-//response.data.wind.speed
+// wind gust
 //response.data.coord.dt
 //response.data.coord.id
