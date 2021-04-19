@@ -19,24 +19,24 @@
   <div class="container">
     <div class="app-container">   
 
-      <h1 class=today></h1>
+      <h1 class="date" id="date"></h1>
       <form>
-        <input type="search" placeholder="Entr city here" autofocus="on" autocomplete="off" id="enterCity" size="24" />
+        <input type="search" placeholder="Enter city here" autofocus="on" autocomplete="off" id="cityInput" class="cityInput" size="24" />
         <input type="submit" value="search" />
       </form>
       
       <div class="icon" id="icon">        
-          <!-- 
-          <i class="fas fa-cloud-sun-rain"></i>
-          -->
+        <img src="" alt="" id="icon" class="icon" />
       </div>
 
-      <div class="city" id="city">Toronto</div>
+      <h2 class="city" id="city">Toronto</h2>
+      <h3 class="description" id="description">Sunny</h3>
+
 
       <div class="row">
 
         <div class="col-3 temp-range min">
-          <span id="min">18</span>
+          <span id="min"></span>
           <br />
           Low
         </div>
@@ -45,8 +45,8 @@
           <i class="fas fa-long-arrow-alt-left"></i>
         </div>
 
-        <div class="col-4 main-temp">
-          <span id="temperature">23</span>
+        <div class="col-4 clearfix main-temp">
+          <span id="temperature"></span>
           <span class="unit">
             <a href="#" id="celsius-link">C</a>
               |
@@ -59,28 +59,40 @@
         </div>
       
         <div class="col-3 temp-range max">
-          <span id="max">27</span> 
+          <span id="max"></span> 
           <br />
           High
         </div>
   
       </div>
 
-      <ul>       
-        <li class="description"><span id="description">Sunny</span></li>
-        <li class="humidity">Humidity: <span id="humidity"></span> %</li>
-        <li class="wind">Wind: <span id="wind"></span> km/h</li>
-        <li class="gust">Gust: <span id="gust"></span> km/h</li>
-      </ul>
+      <div class="row weatherMisc">
+        <div class="col-3">
+          <strong>Humidity</strong>
+          <br />
+          <span id="humidity"></span> %
+        </div>
+        <div class="col-3">
+          <strong>Pressure</strong>
+          <br />
+          <span id="pressure"></span> kPa
+        </div>
+        <div class="col-3">
+          <strong>Wind</strong>
+          <br />
+          <span id="wind"></span> km/h
+        </div>
+        <div class="col-3">
+          <strong>Gust</strong>
+          <br />
+          <span id="gust"></span> km/h
+        </div>
+      </div>
+
 
       <hr/>
 
-      <div class="row ">
-        <div class="col-12">
-          Weather Forecast
-          Weather Forecast
-        </div>
-      </div>
+      <div class="row forecast" id="forecast"></div>
 
 
      </div> 

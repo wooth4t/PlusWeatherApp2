@@ -5,20 +5,86 @@
 --colorfour: #222831;
 
 /*
-#e8e8e8;
-#f05454;
-#30475e;
-#222831;
+--colorone: #e8e8e8;
+--colortwo: #f05454;
+--colorthree: #30475e;
+--colorfour: #222831;
 
-#2c3e50;
-#34495e;
-#ecf0f1;
-#bdc3c7;
+--colorone: #2c3e50;
+--colortwo: #34495e;
+--colorthree: #ecf0f1;
+--colorfour: #bdc3c7;
 
-#0b5269;
-#03051e;
-#978d58;
-#eae1e1;
+--colorone: #0b5269;
+--colortwo: #03051e;
+--colorthree: #978d58;
+--colorfour: #eae1e1;
+
+--colorone:#f1f1f1;
+--colortwo: #fdb827;
+--colorthree: #21209c;
+--colorfour: #23120b;
+
+--colorone: #325288;
+--colortwo: #f4eee8;
+--colorthree: #f5cebe;
+--colorfour: #114e60;
+
+--colorone: #222831;
+--colortwo: #30475e;
+--colorthree: #c1a57b;
+--colorfour: #ececec;
+
+--colorone: #cb9b42;
+--colortwo: #b1d1c5;
+--colorthree: #f2f3ee;
+--colorfour: #dbd7cb;
+
+--colorone: #2d4059;
+--colortwo: #ffb400;
+--colorthree: #f6f6f6;
+--colorfour: #ea5455;
+
+--colorone: #194769;
+--colortwo: #f6f6e9;
+--colorthree: #d7eef2;
+--colorfour: #f2855e;
+
+--colorone: #2d4059;
+--colortwo: #ea5455;
+--colorthree: #decdc3;
+--colorfour: #e5e5e5;
+
+--colorone: #eeeeee;
+--colortwo: #222831;
+--colorthree: #4f8a8b;
+--colorfour: #fbd46d;
+
+--colorone: #f6f6f6;
+--colortwo: #eae9e9;
+--colorthree: #d4d7dd;
+--colorfour: #420000;
+
+--colorone: #f9f8eb;
+--colortwo: #76b39d;
+--colorthree: #05004e;
+--colorfour: #fd5f00;
+
+--colorone: #;
+--colortwo: #;
+--colorthree: #;
+--colorfour: #;
+
+--colorone: #;
+--colortwo: #;
+--colorthree: #;
+--colorfour: #;
+
+--colorone: #;
+--colortwo: #;
+--colorthree: #;
+--colorfour: #;
+
 */
 
 }
@@ -28,19 +94,6 @@ body {
   font-family: 'Changa', sans-serif;
   max-width: 360px;
   margin: 0 auto;
-}
-
-.icon:after {
-  color: var(--colortwo);
-  content: "\f743";
-  font-family: FontAwesome;
-  font-size: 180px;
-  position: absolute;
-  top: 15%;
-  left: 28%;
-  margin: 0;
-  opacity: .04;
-  z-index: 1;  
 }
 
 .app-container {
@@ -61,22 +114,36 @@ h1 {
 }
 
 form {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
-.city {
-  font-size: 30px;
-  padding: 0 0 50px 20px;
-}
-
-ul {
-  list-style: none;
+#icon {
+  color: var(--colortwo);
+  /*content: "\f743";
+  font-family: FontAwesome;*/
+  font-size: 180px;
+  position: absolute;
+  top: 20%;
+  left: 26%;
   margin: 0;
-  padding: 0;
+  opacity: .04;
+  z-index: 1;  
 }
 
-li {
-  padding: 0;
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  padding: 0 0 170px 20px;
+}
+
+h3:first-letter {
+  text-transform: capitalize;
 }
 
 .col-4, .col-1, .col-3 {
@@ -97,17 +164,27 @@ span#temperature {
   font-size: 12px;
   position: relative;
   top: -20px;
+  padding-left: 5px;
 }
 
-.main-temp .unit a,
-.temp-range a {
+.main-temp .unit a {
   text-decoration: none;
   color: var(--colorthree);
 }
 
-.main-temp .unit a:hover,
-.temp-range a:hover {
-  color: var(--colortwo);
+.main-temp .unit a:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.main-temp .active {
+  color: rgb(126, 16, 136);
+  cursor: default;
+}
+
+.main-temp .active:hover {
+  text-decoration: none;
+
 }
 
 .temp-range {
@@ -119,17 +196,9 @@ span#temperature {
 }
 .temp-range.max {
   padding: 15px 40px 0 0;
+  text-align: right;
 }
 
-.temp-range .unit a {
-  font-size: 9px;
-  position: relative;
-  top: -3px;
-}
-
-.temp-range #celsius-link {
-  margin-left: 3px;
-}
 
 .fa-long-arrow-alt-left {
   color: var(--colorthree);
@@ -138,11 +207,6 @@ span#temperature {
   opacity: 1;
   padding: 20px 5px 0 5px;
 }
-
-.temp-range.max {
-  text-align: right;
-}
-
 .fa-long-arrow-alt-right {
   color: var(--colorthree);
   font-size: 20px;
@@ -151,26 +215,17 @@ span#temperature {
   padding: 20px 5px 0 5px;
 }
 
-
-.description {
-  padding-bottom: 10px;
-}
-
-.col-12 {
-  padding: 0;
+.weatherMisc {
+  font-size: 10px;
+  padding: 20px;
   text-align: center;
 }
 
+.weatherMisc strong {
+  font-size: 12px;
+}
 
-
-
-
-/**
-
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-    **/
+.forecast {
+  padding: 0;
+  text-align: center;
+}
